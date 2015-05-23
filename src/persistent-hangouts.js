@@ -27,16 +27,20 @@ function main() {
     var micAlreadyUnmuted = false;
     
     setInterval(function() {
+
+        // clicks the join button automatically
         var joinBut = $('div[role="button"]').filter(function() { return $(this).text() == "Join" })[0];
         if (joinBut) {
             simulateClick(joinBut);
         }
 
+        // clicks 'i am still here' button
         var iAmStillHereButton = $('div:has(div h1:contains("still there")) div div[role="button"]:contains("Yes")')[0];
         if (iAmStillHereButton) {
             simulateClick(iAmStillHereButton); 
         }
         
+        // ensures mic is enabled
         if (!micAlreadyUnmuted) {
             var micCont = $('div[role="button"][aria-label="Unmute microphone"]')[0];
             if (micCont) {
@@ -45,8 +49,16 @@ function main() {
             }
         }
 
-	// todo: 
-	// click connection timed out button
+        // when connection is interrupted, an unreachable app page appears
+        // TODO: This will show a chrome error page if the internet is disconnected...
+        var appUnavailable = $( "(#msg):contains('The app is currently unreachable.')" );
+        if (appUnavailable){
+            location.reload();
+        }
+
+    	// TODO:
+    	// click connection timed out button
+
         
     }, 2000);
 }
