@@ -1,2 +1,4 @@
 *.crx
 *.pem
+.DS_Store
+build/
