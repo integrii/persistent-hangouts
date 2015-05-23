@@ -1,0 +1,15 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "content_scripts": [ {
+      "js": [ "persistent-hangouts.js" ],
+      "matches": [ "http://plus.google.com/hangouts/_/*", "https://plus.google.com/hangouts/_/*" ]
+   } ],
+   "description": "Enables persistent Google hangouts by automatically clicking buttons.",
+   "manifest_version": 1,
+   "name": "Persistent Hangouts",
+   "permissions": [ "tabs", "*://plus.google.com/hangouts/_/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}
