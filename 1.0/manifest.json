@@ -7,9 +7,9 @@
       "matches": [ "http://plus.google.com/hangouts/_/*", "https://plus.google.com/hangouts/_/*" ]
    } ],
    "description": "Enables persistent Google hangouts by automatically clicking buttons.",
-   "manifest_version": 1,
+   "manifest_version": 2,
    "name": "Persistent Hangouts",
    "permissions": [ "tabs", "*://plus.google.com/hangouts/_/*" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "1.0"
+   "version": "2"
 }
